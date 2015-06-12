@@ -10,8 +10,8 @@
 	<img id="entete" src="images/mit.jpg" alt="MIT University"/>
 	<div id="contenu">
 		<?php 
-			$conn = mysqli_connect("localhost","root","","blog");
-			$req = "select id,titre,substring(contenu,1,300) as resume from articles order by id desc limit 0,3";
+			$conn = mysqli_connect("us-cdbr-azure-east-a.cloudapp.net","bfd39c80f39ced","c43790df","info3ALCsmmQxPiN");
+			$req = "select id,titre,substring(contenu,1,300) as resume from blog_articles order by id desc limit 0,3";
 			$resultat = mysqli_query($conn,$req);
 			while($ligne=mysqli_fetch_assoc($resultat)){
 				echo '<h2>'.$ligne['titre'].'</h2>';
